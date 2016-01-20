@@ -12,6 +12,12 @@
 		A914C1D11C4AF50300738ACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A914C1CF1C4AF50300738ACA /* Main.storyboard */; };
 		A914C1D31C4AF50300738ACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A914C1D21C4AF50300738ACA /* Assets.xcassets */; };
 		A914C1D61C4AF50300738ACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A914C1D41C4AF50300738ACA /* LaunchScreen.storyboard */; };
+		A914C1E21C4AF78600738ACA /* HaveIBeenPwnedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1E11C4AF78600738ACA /* HaveIBeenPwnedClient.swift */; };
+		A914C1E41C4AF9A200738ACA /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1E31C4AF9A200738ACA /* CoreDataStackManager.swift */; };
+		A914C1EA1C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A914C1E81C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld */; };
+		A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */; };
+		A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1ED1C4B0DB400738ACA /* Breach.swift */; };
+		A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1F01C4DB2BC00738ACA /* HttpClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		A914C1D21C4AF50300738ACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A914C1D51C4AF50300738ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A914C1D71C4AF50300738ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A914C1E11C4AF78600738ACA /* HaveIBeenPwnedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaveIBeenPwnedClient.swift; sourceTree = "<group>"; };
+		A914C1E31C4AF9A200738ACA /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
+		A914C1E91C4B0BBD00738ACA /* PwnageChecker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PwnageChecker.xcdatamodel; sourceTree = "<group>"; };
+		A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breach+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A914C1ED1C4B0DB400738ACA /* Breach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
+		A914C1F01C4DB2BC00738ACA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +66,52 @@
 		A914C1CA1C4AF50300738ACA /* PwnageChecker */ = {
 			isa = PBXGroup;
 			children = (
+				A914C1DF1C4AF75E00738ACA /* View */,
+				A914C1DE1C4AF75000738ACA /* Controller */,
+				A914C1DD1C4AF74700738ACA /* Model */,
 				A914C1CB1C4AF50300738ACA /* AppDelegate.swift */,
 				A914C1CD1C4AF50300738ACA /* ViewController.swift */,
 				A914C1CF1C4AF50300738ACA /* Main.storyboard */,
 				A914C1D21C4AF50300738ACA /* Assets.xcassets */,
 				A914C1D41C4AF50300738ACA /* LaunchScreen.storyboard */,
 				A914C1D71C4AF50300738ACA /* Info.plist */,
+				A914C1E81C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld */,
 			);
 			path = PwnageChecker;
+			sourceTree = "<group>";
+		};
+		A914C1DD1C4AF74700738ACA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A914C1E01C4AF76500738ACA /* HaveIBeenPwned */,
+				A914C1E31C4AF9A200738ACA /* CoreDataStackManager.swift */,
+				A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */,
+				A914C1ED1C4B0DB400738ACA /* Breach.swift */,
+				A914C1F01C4DB2BC00738ACA /* HttpClient.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A914C1DE1C4AF75000738ACA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		A914C1DF1C4AF75E00738ACA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		A914C1E01C4AF76500738ACA /* HaveIBeenPwned */ = {
+			isa = PBXGroup;
+			children = (
+				A914C1E11C4AF78600738ACA /* HaveIBeenPwnedClient.swift */,
+			);
+			name = HaveIBeenPwned;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */,
 				A914C1CE1C4AF50300738ACA /* ViewController.swift in Sources */,
+				A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */,
+				A914C1EA1C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld in Sources */,
+				A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */,
+				A914C1E41C4AF9A200738ACA /* CoreDataStackManager.swift in Sources */,
+				A914C1E21C4AF78600738ACA /* HaveIBeenPwnedClient.swift in Sources */,
 				A914C1CC1C4AF50300738ACA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,6 +345,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A914C1E81C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A914C1E91C4B0BBD00738ACA /* PwnageChecker.xcdatamodel */,
+			);
+			currentVersion = A914C1E91C4B0BBD00738ACA /* PwnageChecker.xcdatamodel */;
+			path = PwnageChecker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A914C1C01C4AF50300738ACA /* Project object */;
 }

@@ -8,32 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		A914C1CC1C4AF50300738ACA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1CB1C4AF50300738ACA /* AppDelegate.swift */; };
-		A914C1CE1C4AF50300738ACA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1CD1C4AF50300738ACA /* ViewController.swift */; };
 		A914C1D11C4AF50300738ACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A914C1CF1C4AF50300738ACA /* Main.storyboard */; };
 		A914C1D31C4AF50300738ACA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A914C1D21C4AF50300738ACA /* Assets.xcassets */; };
 		A914C1D61C4AF50300738ACA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A914C1D41C4AF50300738ACA /* LaunchScreen.storyboard */; };
 		A914C1E21C4AF78600738ACA /* HaveIBeenPwnedClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1E11C4AF78600738ACA /* HaveIBeenPwnedClient.swift */; };
 		A914C1E41C4AF9A200738ACA /* CoreDataStackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1E31C4AF9A200738ACA /* CoreDataStackManager.swift */; };
-		A914C1EA1C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A914C1E81C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld */; };
 		A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */; };
 		A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1ED1C4B0DB400738ACA /* Breach.swift */; };
 		A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1F01C4DB2BC00738ACA /* HttpClient.swift */; };
+		A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */; };
+		A9F327F81C5B3D4900BAB1AB /* BreachTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A914C1C81C4AF50300738ACA /* PwnageChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PwnageChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A914C1CB1C4AF50300738ACA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A914C1CD1C4AF50300738ACA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A914C1D01C4AF50300738ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A914C1D21C4AF50300738ACA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A914C1D51C4AF50300738ACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A914C1D71C4AF50300738ACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A914C1E11C4AF78600738ACA /* HaveIBeenPwnedClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HaveIBeenPwnedClient.swift; sourceTree = "<group>"; };
 		A914C1E31C4AF9A200738ACA /* CoreDataStackManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStackManager.swift; sourceTree = "<group>"; };
-		A914C1E91C4B0BBD00738ACA /* PwnageChecker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PwnageChecker.xcdatamodel; sourceTree = "<group>"; };
 		A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breach+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A914C1ED1C4B0DB400738ACA /* Breach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
 		A914C1F01C4DB2BC00738ACA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		A9EF6D981C521F89002417F7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +70,11 @@
 				A914C1DE1C4AF75000738ACA /* Controller */,
 				A914C1DD1C4AF74700738ACA /* Model */,
 				A914C1CB1C4AF50300738ACA /* AppDelegate.swift */,
-				A914C1CD1C4AF50300738ACA /* ViewController.swift */,
 				A914C1CF1C4AF50300738ACA /* Main.storyboard */,
 				A914C1D21C4AF50300738ACA /* Assets.xcassets */,
 				A914C1D41C4AF50300738ACA /* LaunchScreen.storyboard */,
 				A914C1D71C4AF50300738ACA /* Info.plist */,
-				A914C1E81C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld */,
+				A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */,
 			);
 			path = PwnageChecker;
 			sourceTree = "<group>";
@@ -95,6 +94,7 @@
 		A914C1DE1C4AF75000738ACA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -187,12 +187,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */,
-				A914C1CE1C4AF50300738ACA /* ViewController.swift in Sources */,
 				A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */,
-				A914C1EA1C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld in Sources */,
+				A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */,
 				A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */,
 				A914C1E41C4AF9A200738ACA /* CoreDataStackManager.swift in Sources */,
 				A914C1E21C4AF78600738ACA /* HaveIBeenPwnedClient.swift in Sources */,
+				A9F327F81C5B3D4900BAB1AB /* BreachTableViewController.swift in Sources */,
 				A914C1CC1C4AF50300738ACA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,10 +306,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PwnageChecker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.vincechan.PwnageChecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -317,10 +320,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PwnageChecker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.vincechan.PwnageChecker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -343,17 +349,18 @@
 				A914C1DC1C4AF50300738ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		A914C1E81C4B0BBD00738ACA /* PwnageChecker.xcdatamodeld */ = {
+		A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				A914C1E91C4B0BBD00738ACA /* PwnageChecker.xcdatamodel */,
+				A9EF6D981C521F89002417F7 /* Model.xcdatamodel */,
 			);
-			currentVersion = A914C1E91C4B0BBD00738ACA /* PwnageChecker.xcdatamodel */;
-			path = PwnageChecker.xcdatamodeld;
+			currentVersion = A9EF6D981C521F89002417F7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

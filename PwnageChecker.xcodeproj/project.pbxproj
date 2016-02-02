@@ -16,6 +16,7 @@
 		A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */; };
 		A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1ED1C4B0DB400738ACA /* Breach.swift */; };
 		A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1F01C4DB2BC00738ACA /* HttpClient.swift */; };
+		A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EA73871C5EFFF50011F244 /* BreachCell.swift */; };
 		A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */; };
 		A9F327F81C5B3D4900BAB1AB /* BreachTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +33,7 @@
 		A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breach+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A914C1ED1C4B0DB400738ACA /* Breach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
 		A914C1F01C4DB2BC00738ACA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		A9EA73871C5EFFF50011F244 /* BreachCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachCell.swift; sourceTree = "<group>"; };
 		A9EF6D981C521F89002417F7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -70,11 +72,8 @@
 				A914C1DE1C4AF75000738ACA /* Controller */,
 				A914C1DD1C4AF74700738ACA /* Model */,
 				A914C1CB1C4AF50300738ACA /* AppDelegate.swift */,
-				A914C1CF1C4AF50300738ACA /* Main.storyboard */,
 				A914C1D21C4AF50300738ACA /* Assets.xcassets */,
-				A914C1D41C4AF50300738ACA /* LaunchScreen.storyboard */,
 				A914C1D71C4AF50300738ACA /* Info.plist */,
-				A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */,
 			);
 			path = PwnageChecker;
 			sourceTree = "<group>";
@@ -85,6 +84,7 @@
 				A914C1E01C4AF76500738ACA /* HaveIBeenPwned */,
 				A914C1E31C4AF9A200738ACA /* CoreDataStackManager.swift */,
 				A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */,
+				A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */,
 				A914C1ED1C4B0DB400738ACA /* Breach.swift */,
 				A914C1F01C4DB2BC00738ACA /* HttpClient.swift */,
 			);
@@ -102,6 +102,9 @@
 		A914C1DF1C4AF75E00738ACA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A914C1CF1C4AF50300738ACA /* Main.storyboard */,
+				A914C1D41C4AF50300738ACA /* LaunchScreen.storyboard */,
+				A9EA73871C5EFFF50011F244 /* BreachCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			files = (
 				A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */,
 				A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */,
+				A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */,
 				A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */,
 				A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */,
 				A914C1E41C4AF9A200738ACA /* CoreDataStackManager.swift in Sources */,

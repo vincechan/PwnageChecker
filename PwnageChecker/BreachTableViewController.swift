@@ -16,6 +16,8 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 40
         
         do {
             try fetchedResultsController.performFetch()
@@ -28,6 +30,7 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
         if (fetchedResultsController.fetchedObjects?.count == 0) {
             HaveIBeenPwnedClient.sharedInstance().refreshBreaches()
         }
+        tableView.reloadData()
     }
     
     var sharedContext: NSManagedObjectContext {
@@ -45,9 +48,27 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
     }()
     
     
-    func configureCell(cell: UITableViewCell, withBreach breach: Breach) {
-        cell.textLabel!.text = breach.title
-        cell.detailTextLabel?.text = "\(breach.pwnCount!) Accounts"
+    func configureCell(cell: BreachCell, withBreach breach: Breach) {
+        cell.titleLabel.text = breach.title
+        
+        var text = ""
+        if let desc = breach.desc?.dataUsingEncoding(NSUTF8StringEncoding) {
+            do {
+                text = try NSAttributedString(data: desc,
+                    options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
+                        NSCharacterEncodingDocumentAttribute:NSUTF8StringEncoding],
+                    documentAttributes: nil).string
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
+        
+        cell.descriptionLabel.text = text
+        
+        cell.pwnCountLabel.text = "Affected Accounts: \(breach.pwnCount!)"
+        var dataClasses = breach.dataClasses ?? "N/A"
+        cell.dataClassesLabel.text = "Compromised Data: \(dataClasses)"
+        
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }
     
@@ -60,25 +81,22 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
         
         let CellIdentifier = "BreachCell"
         let breach = fetchedResultsController.objectAtIndexPath(indexPath) as! Breach
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)! as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)! as! BreachCell
         configureCell(cell, withBreach: breach)
+        
+        cell.setNeedsUpdateConstraints()
+        cell.updateConstraintsIfNeeded()
+        
         
         return cell
     }
     
-    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let breach = fetchedResultsController.objectAtIndexPath(indexPath)
         print("\(breach.title!)")
-        /*
-    // present the detail view when a meme is selected
-    let controller = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
-    controller.memeIndex = indexPath.row
-    navigationController!.pushViewController(controller, animated: true)
-        */
     }
     
-    
+    // MARK: NSFetchedResultsControllerDelegate
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
         self.tableView.beginUpdates()
@@ -112,7 +130,7 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
             
         case .Update:
             let breach = controller.objectAtIndexPath(indexPath!) as! Breach
-            let cell = tableView.cellForRowAtIndexPath(indexPath!)! as UITableViewCell
+            let cell = tableView.cellForRowAtIndexPath(indexPath!)! as! BreachCell
             configureCell(cell, withBreach: breach)
         case .Move:
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)

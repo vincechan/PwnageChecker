@@ -31,6 +31,9 @@ class Breach: NSManagedObject {
         pwnCount = apiBreachResult[Keys.PwnCount] as? Int
         desc = apiBreachResult[Keys.Description] as? String
         dataClasses = apiBreachResult[Keys.DataClasses] as? String
+        if dataClasses == nil {
+            dataClasses = ""
+        }
         isVerified = apiBreachResult[Keys.IsVerified] as? Bool
         logoType = apiBreachResult[Keys.LogoType] as? String
     }

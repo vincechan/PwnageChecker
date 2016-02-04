@@ -13,7 +13,6 @@ class BreachCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var logoImageView: UIImageView!
     @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var pwnCountLabel: UILabel!
     @IBOutlet var dataClassesLabel: UILabel!
     
 }

@@ -30,8 +30,9 @@ class Breach: NSManagedObject {
         addedDate = apiBreachResult[Keys.AddedDate] as? String
         pwnCount = apiBreachResult[Keys.PwnCount] as? Int
         desc = apiBreachResult[Keys.Description] as? String
-        dataClasses = apiBreachResult[Keys.DataClasses] as? String
-        if dataClasses == nil {
+        if let dataClassesArray = apiBreachResult[Keys.DataClasses] as? [String] {
+            dataClasses = dataClassesArray.joinWithSeparator(", ")
+        } else {
             dataClasses = ""
         }
         isVerified = apiBreachResult[Keys.IsVerified] as? Bool
@@ -46,6 +47,7 @@ class Breach: NSManagedObject {
             try CoreDataStackManager.sharedInstance().persistentStoreCoordinator!.executeRequest(
                 deleteRequest,
                 withContext: CoreDataStackManager.sharedInstance().managedObjectContext)
+            CoreDataStackManager.sharedInstance().saveContext()
         } catch let error as NSError {
             // TODO: error handling
             print("deleteAll error: \(error)")

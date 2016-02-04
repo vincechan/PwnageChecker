@@ -17,20 +17,18 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 40
+        tableView.estimatedRowHeight = 140
         
         do {
             try fetchedResultsController.performFetch()
         } catch {}
-        
         fetchedResultsController.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
         if (fetchedResultsController.fetchedObjects?.count == 0) {
-            HaveIBeenPwnedClient.sharedInstance().refreshBreaches()
+            HaveIBeenPwnedClient.sharedInstance().refreshBreachesInBackground()
         }
-        tableView.reloadData()
     }
     
     var sharedContext: NSManagedObjectContext {
@@ -39,7 +37,7 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     lazy var fetchedResultsController: NSFetchedResultsController = {
         let fetchRequest = NSFetchRequest(entityName: "Breach")
-        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "pwnCount", ascending: false)]
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.sharedContext, sectionNameKeyPath: nil, cacheName: nil)
         fetchedResultsController.delegate = self
@@ -65,9 +63,14 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
         
         cell.descriptionLabel.text = text
         
-        cell.pwnCountLabel.text = "Affected Accounts: \(breach.pwnCount!)"
-        var dataClasses = breach.dataClasses ?? "N/A"
-        cell.dataClassesLabel.text = "Compromised Data: \(dataClasses)"
+        let dataClasses = breach.dataClasses ?? "N/A"
+        let dataClassesText = NSMutableAttributedString()
+        // Initialize with a string and inline attribute(s)
+        dataClassesText.appendAttributedString(NSAttributedString(string: "Compromised Data: ",
+            attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(12)]))
+        dataClassesText.appendAttributedString(NSAttributedString(string: "\(dataClasses)",
+            attributes:  [NSFontAttributeName: UIFont.systemFontOfSize(12)]))
+        cell.dataClassesLabel.attributedText = dataClassesText
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }

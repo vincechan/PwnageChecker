@@ -51,8 +51,37 @@ class HaveIBeenPwnedClient : NSObject {
         }
     }
     
+    func refreshBreaches(completionHandler: ()->Void)->Void {
+        getBreaches() {
+            (result, error) in
+            guard (error == nil) else {
+                print("refreshBreaches: error \(error)")
+                return
+            }
+            
+            guard let breachArray = result as? [[String:AnyObject]] else {
+                print("refreshBreaches: no breach result found in response")
+                return
+            }
+            
+            guard breachArray.count > 0 else {
+                print("refreshBreaches: no breach result found in response")
+                return
+            }
+            
+            dispatch_async(dispatch_get_main_queue()) {
+                Breach.deleteAll()
+                for breachItem in breachArray {
+                    let breach = Breach(apiBreachResult: breachItem, context: CoreDataStackManager.sharedInstance().managedObjectContext)
+                }
+                CoreDataStackManager.sharedInstance().saveContext()
+                completionHandler()
+            }
+        }
+    }
+        
     // refresh breaches in local cache
-    func refreshBreaches()->Void {
+    func refreshBreachesInBackground()->Void {
         getBreaches() {
             (result, error) in
             guard (error == nil) else {
@@ -73,8 +102,7 @@ class HaveIBeenPwnedClient : NSObject {
             dispatch_async(dispatch_get_main_queue()) {
                 Breach.deleteAll()
                 for breachItem in breachArray {
-                    let b = Breach(apiBreachResult: breachItem, context: CoreDataStackManager.sharedInstance().managedObjectContext)
-                    print(b)
+                    let breach = Breach(apiBreachResult: breachItem, context: CoreDataStackManager.sharedInstance().managedObjectContext)
                 }
                 CoreDataStackManager.sharedInstance().saveContext()
             }

@@ -16,6 +16,7 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
         
@@ -65,12 +66,14 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
         
         let dataClasses = breach.dataClasses ?? "N/A"
         let dataClassesText = NSMutableAttributedString()
-        // Initialize with a string and inline attribute(s)
         dataClassesText.appendAttributedString(NSAttributedString(string: "Compromised Data: ",
             attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(12)]))
         dataClassesText.appendAttributedString(NSAttributedString(string: "\(dataClasses)",
             attributes:  [NSFontAttributeName: UIFont.systemFontOfSize(12)]))
         cell.dataClassesLabel.attributedText = dataClassesText
+        if let domain = breach.domain {
+            cell.loadImage(domain)
+        }
         
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
     }

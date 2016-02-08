@@ -39,6 +39,13 @@ class Breach: NSManagedObject {
         logoType = apiBreachResult[Keys.LogoType] as? String
     }
     
+    override func prepareForDeletion() {
+        // delete physical file
+        if let domain = domain {
+            ImageCache.sharedInstance().storeImage(nil, withName: domain)
+        }
+    }
+    
     class func deleteAll() {
         let fetchRequest = NSFetchRequest(entityName: "Breach")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)

@@ -16,6 +16,8 @@
 		A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */; };
 		A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1ED1C4B0DB400738ACA /* Breach.swift */; };
 		A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1F01C4DB2BC00738ACA /* HttpClient.swift */; };
+		A9C3A94F1C6437A800C85570 /* ClearbitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3A94E1C6437A800C85570 /* ClearbitClient.swift */; };
+		A9C3A9511C64502200C85570 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3A9501C64502200C85570 /* ImageCache.swift */; };
 		A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EA73871C5EFFF50011F244 /* BreachCell.swift */; };
 		A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */; };
 		A9F327F81C5B3D4900BAB1AB /* BreachTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */; };
@@ -33,6 +35,8 @@
 		A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breach+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A914C1ED1C4B0DB400738ACA /* Breach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
 		A914C1F01C4DB2BC00738ACA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		A9C3A94E1C6437A800C85570 /* ClearbitClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearbitClient.swift; sourceTree = "<group>"; };
+		A9C3A9501C64502200C85570 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		A9EA73871C5EFFF50011F244 /* BreachCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachCell.swift; sourceTree = "<group>"; };
 		A9EF6D981C521F89002417F7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachTableViewController.swift; sourceTree = "<group>"; };
@@ -81,12 +85,14 @@
 		A914C1DD1C4AF74700738ACA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A9C3A94D1C64379C00C85570 /* Clearbit */,
 				A914C1E01C4AF76500738ACA /* HaveIBeenPwned */,
 				A914C1E31C4AF9A200738ACA /* CoreDataStackManager.swift */,
 				A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */,
 				A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */,
 				A914C1ED1C4B0DB400738ACA /* Breach.swift */,
 				A914C1F01C4DB2BC00738ACA /* HttpClient.swift */,
+				A9C3A9501C64502200C85570 /* ImageCache.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -115,6 +121,14 @@
 				A914C1E11C4AF78600738ACA /* HaveIBeenPwnedClient.swift */,
 			);
 			name = HaveIBeenPwned;
+			sourceTree = "<group>";
+		};
+		A9C3A94D1C64379C00C85570 /* Clearbit */ = {
+			isa = PBXGroup;
+			children = (
+				A9C3A94E1C6437A800C85570 /* ClearbitClient.swift */,
+			);
+			name = Clearbit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,8 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C3A9511C64502200C85570 /* ImageCache.swift in Sources */,
 				A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */,
 				A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */,
+				A9C3A94F1C6437A800C85570 /* ClearbitClient.swift in Sources */,
 				A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */,
 				A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */,
 				A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */,

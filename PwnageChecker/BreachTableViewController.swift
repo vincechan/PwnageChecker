@@ -98,8 +98,10 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let breach = fetchedResultsController.objectAtIndexPath(indexPath)
-        print("\(breach.title!)")
+        let breach = fetchedResultsController.objectAtIndexPath(indexPath) as! Breach
+        let controller = storyboard?.instantiateViewControllerWithIdentifier("BreachViewController") as! BreachViewController
+        controller.breach = breach
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     // MARK: NSFetchedResultsControllerDelegate

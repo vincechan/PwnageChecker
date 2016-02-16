@@ -18,7 +18,7 @@ class BreachCell: UITableViewCell {
 
     
     func loadImage(companyDomain: String)->Void {
-        var image = ImageCache.sharedInstance().imageWithName(companyDomain)
+        let image = ImageCache.sharedInstance().imageWithName(companyDomain)
         
         // if image is in cache, display immediately, otherwise download and show it
         if image != nil {
@@ -32,15 +32,18 @@ class BreachCell: UITableViewCell {
             
             ClearbitClient.sharedInstance().getImage(companyDomain) {
                 (imageData, error) in
+                var downloadImage = UIImage(named: "noImage")
+                if (error != nil) {
+                    print("download image error domain: \(companyDomain) error \(error)")
+                }
+                else {
+                    if let image = UIImage(data: imageData!) {
+                        downloadImage = image
+                        ImageCache.sharedInstance().storeImage(image, withName: companyDomain)
+                    }
+                }
                 dispatch_async(dispatch_get_main_queue()) {
-                    if (error != nil) {
-                        print("download image error domain: \(companyDomain) error \(error)")
-                    }
-                    else {
-                        if let image = UIImage(data: imageData!) {
-                            self.logoImageView.image = image
-                        }
-                    }
+                    self.logoImageView.image = downloadImage
                     self.logoImageView.hidden = false
                     self.loadImageActivityIndicator.stopAnimating()
                     self.loadImageActivityIndicator.hidden = true

@@ -72,7 +72,7 @@ class HaveIBeenPwnedClient : NSObject {
             dispatch_async(dispatch_get_main_queue()) {
                 Breach.deleteAll()
                 for breachItem in breachArray {
-                    let breach = Breach(apiBreachResult: breachItem, context: CoreDataStackManager.sharedInstance().managedObjectContext)
+                    _ = Breach(apiBreachResult: breachItem, context: CoreDataStackManager.sharedInstance().managedObjectContext)
                 }
                 CoreDataStackManager.sharedInstance().saveContext()
                 completionHandler()
@@ -102,7 +102,7 @@ class HaveIBeenPwnedClient : NSObject {
             dispatch_async(dispatch_get_main_queue()) {
                 Breach.deleteAll()
                 for breachItem in breachArray {
-                    let breach = Breach(apiBreachResult: breachItem, context: CoreDataStackManager.sharedInstance().managedObjectContext)
+                    _ = Breach(apiBreachResult: breachItem, context: CoreDataStackManager.sharedInstance().managedObjectContext)
                 }
                 CoreDataStackManager.sharedInstance().saveContext()
             }

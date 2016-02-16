@@ -15,8 +15,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        setThemeColor()
+        
         return true
+    }
+    
+    func setThemeColor() {
+        let themeColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
+        
+        // Navigation bar background color
+        UINavigationBar.appearance().barTintColor = themeColor
+        
+        // Make the back button white
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        
+        // Make the text in the navigation bar white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
 
     func applicationWillResignActive(application: UIApplication) {

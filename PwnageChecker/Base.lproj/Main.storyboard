@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-583" y="-162"/>
         </scene>
-        <!--View Controller-->
+        <!--Have I Been Pwned?-->
         <scene sceneID="iRJ-ct-E2r">
             <objects>
                 <viewController id="R7a-4N-cgi" sceneMemberID="viewController">
@@ -35,18 +35,48 @@
                     <view key="view" contentMode="scaleToFill" id="SY8-N5-XuN">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3J-x7-eUX">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8km-tw-XQC">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="0.0"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8km-tw-XQC" firstAttribute="leading" secondItem="w3J-x7-eUX" secondAttribute="leading" id="PCY-Z2-OJ7"/>
+                                    <constraint firstAttribute="bottom" secondItem="8km-tw-XQC" secondAttribute="bottom" id="Xz0-Z2-wqG"/>
+                                    <constraint firstItem="8km-tw-XQC" firstAttribute="width" secondItem="w3J-x7-eUX" secondAttribute="width" id="aSg-AT-CPY"/>
+                                    <constraint firstItem="8km-tw-XQC" firstAttribute="top" secondItem="w3J-x7-eUX" secondAttribute="top" id="ab5-s8-aNS"/>
+                                    <constraint firstAttribute="trailing" secondItem="8km-tw-XQC" secondAttribute="trailing" id="bP9-7d-8lJ"/>
+                                    <constraint firstAttribute="width" constant="600" id="kQP-e8-YnY"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kQP-e8-YnY"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="w3J-x7-eUX" secondAttribute="trailing" id="I6T-EZ-LvJ"/>
+                            <constraint firstItem="w3J-x7-eUX" firstAttribute="top" secondItem="ESu-gh-GzE" secondAttribute="bottom" id="r9L-IN-YOp"/>
+                            <constraint firstItem="w3J-x7-eUX" firstAttribute="leading" secondItem="SY8-N5-XuN" secondAttribute="leading" id="uwE-fK-eUK"/>
+                            <constraint firstItem="w3J-x7-eUX" firstAttribute="bottom" secondItem="zP2-j5-WLc" secondAttribute="top" id="vdI-d8-T6N"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="nkZ-dD-Ak5"/>
+                    <navigationItem key="navigationItem" title="Have I Been Pwned?" id="nkZ-dD-Ak5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZr-oF-0Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="839" y="-528"/>
         </scene>
-        <!--Pwned websites-->
+        <!--All Breached Sites-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="BreachTableViewController" customModule="PwnageChecker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="All Breached Sites" id="BYZ-38-t0r" customClass="BreachTableViewController" customModule="PwnageChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -103,7 +133,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-Mp-kqZ">
+                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-Mp-kqZ">
                                                     <rect key="frame" x="40" y="39" width="20" height="20"/>
                                                 </activityIndicatorView>
                                             </subviews>
@@ -153,7 +183,7 @@
                             <constraint firstAttribute="trailing" secondItem="ks4-Ww-x61" secondAttribute="trailing" id="a3v-wa-dwR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Pwned websites" prompt="Breached websites that have been loaded into this service" id="YG2-W1-g9N">
+                    <navigationItem key="navigationItem" title="All Breached Sites" prompt="All breached sites that have been loaded into this service" id="YG2-W1-g9N">
                         <barButtonItem key="backBarButtonItem" title="Back" id="d7Y-jq-g7T"/>
                     </navigationItem>
                     <connections>
@@ -164,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="839" y="148"/>
         </scene>
-        <!--Breach View Controller-->
+        <!--Pwned Site-->
         <scene sceneID="OmD-NQ-ahV">
             <objects>
-                <viewController storyboardIdentifier="BreachViewController" automaticallyAdjustsScrollViewInsets="NO" id="jZk-nE-wTL" customClass="BreachViewController" customModule="PwnageChecker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BreachViewController" title="Pwned Site" automaticallyAdjustsScrollViewInsets="NO" id="jZk-nE-wTL" customClass="BreachViewController" customModule="PwnageChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9Rw-ij-cDQ"/>
                         <viewControllerLayoutGuide type="bottom" id="5eB-KO-96w"/>
@@ -199,13 +229,13 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AnG-bT-RAb">
                                                         <rect key="frame" x="0.0" y="60" width="560" height="41"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="COMPROMISED DATA:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ3-t2-Ffe">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="COMPROMISED DATA:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZ3-t2-Ffe">
                                                                 <rect key="frame" x="0.0" y="0.0" width="560" height="21"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Compromised Data Value" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jei-Jz-bkF">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Compromised Data Value" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jei-Jz-bkF">
                                                                 <rect key="frame" x="0.0" y="21" width="560" height="20"/>
                                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,6 +317,7 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="N2S-Vy-tda" firstAttribute="leading" secondItem="A9d-5o-zQO" secondAttribute="leading" id="6Ys-Kq-KBi"/>
+                                    <constraint firstAttribute="bottom" secondItem="N2S-Vy-tda" secondAttribute="bottom" id="NiA-cw-juw"/>
                                     <constraint firstItem="N2S-Vy-tda" firstAttribute="top" secondItem="A9d-5o-zQO" secondAttribute="top" id="Xl5-kB-Tlr"/>
                                     <constraint firstItem="N2S-Vy-tda" firstAttribute="width" secondItem="A9d-5o-zQO" secondAttribute="width" id="bFf-Pw-707"/>
                                     <constraint firstAttribute="trailing" secondItem="N2S-Vy-tda" secondAttribute="trailing" id="cUf-Ge-jVe"/>
@@ -340,11 +371,11 @@
             </objects>
             <point key="canvasLocation" x="1536" y="133"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--All Breached Sites-->
         <scene sceneID="EIL-7d-Hbd">
             <objects>
                 <navigationController id="GbU-lE-KhM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="downloads" id="Rtv-sb-v2q"/>
+                    <tabBarItem key="tabBarItem" title="All Breached Sites" image="Info" selectedImage="Info" id="Rtv-sb-v2q"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3dL-VQ-bdA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -357,11 +388,11 @@
             </objects>
             <point key="canvasLocation" x="133" y="148"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Check-->
         <scene sceneID="5ib-9V-V3o">
             <objects>
                 <navigationController id="Q3t-IH-lUx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" systemItem="search" id="ip7-0F-xLl"/>
+                    <tabBarItem key="tabBarItem" title="Check" image="Search" id="ip7-0F-xLl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mgf-p3-Z9v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -376,6 +407,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Info" width="40" height="40"/>
+        <image name="Search" width="40" height="40"/>
         <image name="noImage" width="48" height="46"/>
     </resources>
 </document>

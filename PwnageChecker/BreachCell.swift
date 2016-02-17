@@ -26,7 +26,6 @@ class BreachCell: UITableViewCell {
         }
         else {
             logoImageView.hidden = true
-            loadImageActivityIndicator.hidden = false
             loadImageActivityIndicator.frame = logoImageView.frame
             loadImageActivityIndicator.startAnimating()
             
@@ -46,7 +45,6 @@ class BreachCell: UITableViewCell {
                     self.logoImageView.image = downloadImage
                     self.logoImageView.hidden = false
                     self.loadImageActivityIndicator.stopAnimating()
-                    self.loadImageActivityIndicator.hidden = true
                 }
             }
         }

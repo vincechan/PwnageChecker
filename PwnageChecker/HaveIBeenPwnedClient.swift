@@ -12,6 +12,11 @@ import Foundation
 extension HaveIBeenPwnedClient {
     struct Methods {
         static let Breaches = "breaches"
+        static let BreachAccount = "breachedaccount/{account}"
+    }
+    
+    struct UrlKeys {
+        static let Account = "account"
     }
 }
 
@@ -29,7 +34,6 @@ class HaveIBeenPwnedClient : NSObject {
     }
     
     func getBreaches(completionHandler: (result: AnyObject!, error: String?)->Void) {
-        
         HttpClient.sharedInstance().httpGet(BASE_URL, method: Methods.Breaches, urlParams: nil, headerParams: nil) {
             (data, code, error) in
             
@@ -47,6 +51,39 @@ class HaveIBeenPwnedClient : NSObject {
                 }
                 
                 completionHandler(result: json, error: nil)
+            }
+        }
+    }
+    
+    func getBreachesForAccount(emailOrUsername : String, completionHandler : (breached: Bool, result: AnyObject!, error: String?)->Void) {
+      
+        let escapedValue = emailOrUsername.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
+        let method = HttpClient.subtituteKeyInMethod(Methods.BreachAccount, key: UrlKeys.Account, value: escapedValue)!
+       
+        let urlParams = [ "truncateResponse": "true"];
+        
+        HttpClient.sharedInstance().httpGet(BASE_URL, method: method, urlParams: urlParams, headerParams: nil) {
+            (data, code, error) in
+            
+            guard error == nil else {
+                if (code == 404) {
+                    completionHandler(breached: false, result: nil, error: nil)
+                }
+                else {
+                    completionHandler(breached: false, result: nil, error: error)
+                }
+                return
+            }
+            
+            HttpClient.parseJSONWithCompletionHandler(data!) {
+                (json, parseError) in
+                
+                guard parseError == nil else {
+                    completionHandler(breached: false, result: nil, error: "Failed to parse response \(parseError)")
+                    return
+                }
+                
+                completionHandler(breached: true, result: json, error: nil)
             }
         }
     }

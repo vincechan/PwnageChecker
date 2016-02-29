@@ -33,7 +33,7 @@ class HaveIBeenPwnedClient : NSObject {
         return Singleton.sharedInstance
     }
     
-    func getBreaches(completionHandler: (result: AnyObject!, error: String?)->Void) {
+    private func getBreaches(completionHandler: (result: AnyObject!, error: String?)->Void) {
         HttpClient.sharedInstance().httpGet(BASE_URL, method: Methods.Breaches, urlParams: nil, headerParams: nil) {
             (data, code, error) in
             
@@ -55,22 +55,22 @@ class HaveIBeenPwnedClient : NSObject {
         }
     }
     
-    func getBreachesForAccount(emailOrUsername : String, completionHandler : (breached: Bool, result: AnyObject!, error: String?)->Void) {
+    func getBreachesForAccount(emailOrUsername : String, completionHandler : (hasBreaches: Bool, result: AnyObject!, error: String?)->Void) {
       
         let escapedValue = emailOrUsername.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         let method = HttpClient.subtituteKeyInMethod(Methods.BreachAccount, key: UrlKeys.Account, value: escapedValue)!
        
-        let urlParams = [ "truncateResponse": "true"];
+        //let urlParams = [ "truncateResponse": "true"];
         
-        HttpClient.sharedInstance().httpGet(BASE_URL, method: method, urlParams: urlParams, headerParams: nil) {
+        HttpClient.sharedInstance().httpGet(BASE_URL, method: method, urlParams: nil, headerParams: nil) {
             (data, code, error) in
             
             guard error == nil else {
                 if (code == 404) {
-                    completionHandler(breached: false, result: nil, error: nil)
+                    completionHandler(hasBreaches: false, result: nil, error: nil)
                 }
                 else {
-                    completionHandler(breached: false, result: nil, error: error)
+                    completionHandler(hasBreaches: false, result: nil, error: error)
                 }
                 return
             }
@@ -79,40 +79,11 @@ class HaveIBeenPwnedClient : NSObject {
                 (json, parseError) in
                 
                 guard parseError == nil else {
-                    completionHandler(breached: false, result: nil, error: "Failed to parse response \(parseError)")
+                    completionHandler(hasBreaches: false, result: nil, error: "Failed to parse response \(parseError)")
                     return
                 }
                 
-                completionHandler(breached: true, result: json, error: nil)
-            }
-        }
-    }
-    
-    func refreshBreaches(completionHandler: ()->Void)->Void {
-        getBreaches() {
-            (result, error) in
-            guard (error == nil) else {
-                print("refreshBreaches: error \(error)")
-                return
-            }
-            
-            guard let breachArray = result as? [[String:AnyObject]] else {
-                print("refreshBreaches: no breach result found in response")
-                return
-            }
-            
-            guard breachArray.count > 0 else {
-                print("refreshBreaches: no breach result found in response")
-                return
-            }
-            
-            dispatch_async(dispatch_get_main_queue()) {
-                Breach.deleteAll()
-                for breachItem in breachArray {
-                    _ = Breach(apiBreachResult: breachItem, context: CoreDataStackManager.sharedInstance().managedObjectContext)
-                }
-                CoreDataStackManager.sharedInstance().saveContext()
-                completionHandler()
+                completionHandler(hasBreaches: true, result: json, error: nil)
             }
         }
     }

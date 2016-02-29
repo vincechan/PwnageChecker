@@ -18,11 +18,10 @@ class BreachViewController: UIViewController {
     @IBOutlet weak var pwnCountLabel: UILabel!
     @IBOutlet weak var breachDateLabel: UILabel!
     @IBOutlet weak var isSensitiveSwitch: UISwitch!
-    @IBOutlet var descriptionWebView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+     
         navigationItem.title = breach.title
         compromisedDataLabel.text = breach.dataClasses ?? "N/A"
         pwnCountLabel.text = breach.pwnCount?.stringValue ?? "N/A"
@@ -42,12 +41,8 @@ class BreachViewController: UIViewController {
         }
         descriptionLabel.text = text
         
-    
-        
         if let image = ImageCache.sharedInstance().imageWithName(breach.domain!) {
             logoImageView.image = image
         }
-        
-        
     }
   }

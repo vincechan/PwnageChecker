@@ -17,8 +17,9 @@
 		A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1ED1C4B0DB400738ACA /* Breach.swift */; };
 		A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1F01C4DB2BC00738ACA /* HttpClient.swift */; };
 		A94DEEDE1C68C3C000DBDE87 /* BreachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */; };
-		A94DEEE01C78FC8600DBDE87 /* CheckAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEDF1C78FC8600DBDE87 /* CheckAccountViewController.swift */; };
+		A94DEEE01C78FC8600DBDE87 /* SearchAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */; };
 		A94DEEE21C7B929700DBDE87 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEE11C7B929700DBDE87 /* LoadingIndicatorView.swift */; };
+		A94DEEE61C839B3E00DBDE87 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */; };
 		A9C3A94F1C6437A800C85570 /* ClearbitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3A94E1C6437A800C85570 /* ClearbitClient.swift */; };
 		A9C3A9511C64502200C85570 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3A9501C64502200C85570 /* ImageCache.swift */; };
 		A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EA73871C5EFFF50011F244 /* BreachCell.swift */; };
@@ -39,8 +40,9 @@
 		A914C1ED1C4B0DB400738ACA /* Breach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
 		A914C1F01C4DB2BC00738ACA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachViewController.swift; sourceTree = "<group>"; };
-		A94DEEDF1C78FC8600DBDE87 /* CheckAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckAccountViewController.swift; sourceTree = "<group>"; };
+		A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAccountViewController.swift; sourceTree = "<group>"; };
 		A94DEEE11C7B929700DBDE87 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		A9C3A94E1C6437A800C85570 /* ClearbitClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearbitClient.swift; sourceTree = "<group>"; };
 		A9C3A9501C64502200C85570 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		A9EA73871C5EFFF50011F244 /* BreachCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachCell.swift; sourceTree = "<group>"; };
@@ -108,7 +110,8 @@
 			children = (
 				A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */,
 				A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */,
-				A94DEEDF1C78FC8600DBDE87 /* CheckAccountViewController.swift */,
+				A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */,
+				A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -216,13 +219,14 @@
 				A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */,
 				A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */,
 				A9C3A94F1C6437A800C85570 /* ClearbitClient.swift in Sources */,
+				A94DEEE61C839B3E00DBDE87 /* SearchResultsViewController.swift in Sources */,
 				A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */,
 				A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */,
 				A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */,
 				A914C1E41C4AF9A200738ACA /* CoreDataStackManager.swift in Sources */,
 				A94DEEE21C7B929700DBDE87 /* LoadingIndicatorView.swift in Sources */,
 				A914C1E21C4AF78600738ACA /* HaveIBeenPwnedClient.swift in Sources */,
-				A94DEEE01C78FC8600DBDE87 /* CheckAccountViewController.swift in Sources */,
+				A94DEEE01C78FC8600DBDE87 /* SearchAccountViewController.swift in Sources */,
 				A94DEEDE1C68C3C000DBDE87 /* BreachViewController.swift in Sources */,
 				A9F327F81C5B3D4900BAB1AB /* BreachTableViewController.swift in Sources */,
 				A914C1CC1C4AF50300738ACA /* AppDelegate.swift in Sources */,

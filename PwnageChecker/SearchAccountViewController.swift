@@ -12,17 +12,17 @@ class SearchAccountViewController: UIViewController  {
     
     @IBOutlet weak var searchTextField: UITextField!
     
+    override func viewWillAppear(animated: Bool) {
+        ViewHelper.makeNavBarTransparent(navigationController)
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarPosition: .Any, barMetrics: .Default)
-        navigationController?.navigationBar.shadowImage = UIImage()
+    override func viewWillDisappear(animated: Bool) {
+        ViewHelper.undoMakeNavBarTransparent(navigationController)
     }
     
     @IBAction func checkButtonTouch(sender: AnyObject) {
         if searchTextField.text == nil || searchTextField.text == "" {
-            showError("Please enter email address or username of your account")
+            ViewHelper.showError("Please enter email address or username of your account")
             return
         }
         
@@ -34,7 +34,7 @@ class SearchAccountViewController: UIViewController  {
             dispatch_async(dispatch_get_main_queue()) {
                 if (error != nil) {
                     LoadingIndicatorView.hide()
-                    self.showError("Unable to check account. ")
+                    ViewHelper.showError("Unable to check account. ")
                     print(error)
                 }
                 else {
@@ -47,12 +47,5 @@ class SearchAccountViewController: UIViewController  {
                 }
             }
         }
-    }
-    
-    // Show an error message with alert
-    func showError(error: String) {
-        let alert = UIAlertController(title: "", message: error, preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default, handler: nil))
-        presentViewController(alert, animated: true, completion: nil)
     }
 }

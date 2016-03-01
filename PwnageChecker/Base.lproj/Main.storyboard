@@ -39,7 +39,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-po-YIQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Check if your  account has been compromised in any known data breach" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwA-qs-c8P">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your account in known data breach to check if it has been compromised" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwA-qs-c8P">
                                         <rect key="frame" x="10" y="40" width="580" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -54,22 +54,28 @@
                                     <constraint firstItem="hwA-qs-c8P" firstAttribute="top" secondItem="ziH-po-YIQ" secondAttribute="top" constant="40" id="io4-Cf-rTp"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Enter email address or username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBB-7X-f48">
-                                <rect key="frame" x="20" y="120" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Enter email address or username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBB-7X-f48">
+                                <rect key="frame" x="20" y="120" width="560" height="386"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="90" id="JQe-4q-oGK"/>
+                                    <constraint firstAttribute="height" id="JQe-4q-oGK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JQe-4q-oGK"/>
+                                    </mask>
+                                </variation>
                             </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XqW-bq-gfO">
                                 <rect key="frame" x="0.0" y="501" width="600" height="50"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-IR-mKn">
-                                        <rect key="frame" x="269" y="17" width="62" height="17"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krs-IR-mKn">
+                                        <rect key="frame" x="5" y="5" width="590" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <inset key="contentEdgeInsets" minX="40" minY="5" maxX="40" maxY="5"/>
-                                        <state key="normal" title="Check">
+                                        <state key="normal" title="Search">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -80,8 +86,8 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                                <color key="value" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.borderWidth">
+                                                <integer key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -92,9 +98,19 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="Krs-IR-mKn" firstAttribute="centerX" secondItem="XqW-bq-gfO" secondAttribute="centerX" id="ChX-Yh-N2E"/>
+                                    <constraint firstAttribute="trailing" secondItem="Krs-IR-mKn" secondAttribute="trailing" constant="5" id="ExS-H3-5UZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Krs-IR-mKn" secondAttribute="bottom" constant="5" id="Qd2-rf-m4c"/>
+                                    <constraint firstItem="Krs-IR-mKn" firstAttribute="top" secondItem="XqW-bq-gfO" secondAttribute="top" constant="5" id="W5d-FT-x4m"/>
+                                    <constraint firstItem="Krs-IR-mKn" firstAttribute="leading" secondItem="XqW-bq-gfO" secondAttribute="leading" constant="5" id="Xf2-RY-QM9"/>
                                     <constraint firstItem="Krs-IR-mKn" firstAttribute="centerY" secondItem="XqW-bq-gfO" secondAttribute="centerY" id="pOf-js-sd1"/>
                                     <constraint firstAttribute="height" constant="50" id="uJm-UB-U3g"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ChX-Yh-N2E"/>
+                                        <exclude reference="pOf-js-sd1"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -103,6 +119,7 @@
                             <constraint firstItem="vBB-7X-f48" firstAttribute="leading" secondItem="SY8-N5-XuN" secondAttribute="leadingMargin" id="Cxl-6A-bGv"/>
                             <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="SY8-N5-XuN" secondAttribute="top" id="Fkg-9M-ihJ"/>
                             <constraint firstItem="ziH-po-YIQ" firstAttribute="leading" secondItem="SY8-N5-XuN" secondAttribute="leading" id="GsV-sC-pQm"/>
+                            <constraint firstItem="vBB-7X-f48" firstAttribute="top" secondItem="ziH-po-YIQ" secondAttribute="bottom" id="KkE-yH-DiE"/>
                             <constraint firstItem="vBB-7X-f48" firstAttribute="top" secondItem="ziH-po-YIQ" secondAttribute="bottom" id="L6C-mE-RV4"/>
                             <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="SY8-N5-XuN" secondAttribute="top" id="OaN-V2-nFJ"/>
                             <constraint firstItem="zP2-j5-WLc" firstAttribute="top" secondItem="XqW-bq-gfO" secondAttribute="bottom" id="QKq-PO-Iuu"/>
@@ -110,6 +127,7 @@
                             <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="ESu-gh-GzE" secondAttribute="bottom" id="oJc-5C-E7h"/>
                             <constraint firstAttribute="trailing" secondItem="XqW-bq-gfO" secondAttribute="trailing" id="pGM-Rc-xMC"/>
                             <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="ESu-gh-GzE" secondAttribute="bottom" id="rFO-vr-zUj"/>
+                            <constraint firstItem="Krs-IR-mKn" firstAttribute="top" secondItem="vBB-7X-f48" secondAttribute="bottom" id="sX0-dc-EGE"/>
                             <constraint firstItem="XqW-bq-gfO" firstAttribute="leading" secondItem="SY8-N5-XuN" secondAttribute="leading" id="z3V-S4-V7x"/>
                         </constraints>
                         <variation key="default">
@@ -117,6 +135,7 @@
                                 <exclude reference="OaN-V2-nFJ"/>
                                 <exclude reference="oJc-5C-E7h"/>
                                 <exclude reference="rFO-vr-zUj"/>
+                                <exclude reference="L6C-mE-RV4"/>
                             </mask>
                         </variation>
                     </view>
@@ -392,8 +411,8 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="FgH-WS-hyL"/>
                                                     <exclude reference="EYo-7U-Thc"/>
+                                                    <exclude reference="FgH-WS-hyL"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -629,11 +648,11 @@
             </objects>
             <point key="canvasLocation" x="133" y="148"/>
         </scene>
-        <!--Check-->
+        <!--Search-->
         <scene sceneID="5ib-9V-V3o">
             <objects>
                 <navigationController id="Q3t-IH-lUx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Check" image="Search" id="ip7-0F-xLl"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="ip7-0F-xLl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mgf-p3-Z9v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

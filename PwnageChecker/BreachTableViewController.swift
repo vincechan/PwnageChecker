@@ -9,9 +9,8 @@
 import UIKit
 import CoreData
 
-class BreachTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
-    
-    
+class BreachTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate
+{
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -45,55 +44,16 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
         
         return fetchedResultsController
     }()
-    
-    
-    func configureCell(cell: BreachCell, withBreach breach: Breach) {
-        cell.titleLabel.text = breach.title
-        
-        var text = ""
-        if let desc = breach.desc?.dataUsingEncoding(NSUTF8StringEncoding) {
-            do {
-                text = try NSAttributedString(data: desc,
-                    options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-                        NSCharacterEncodingDocumentAttribute:NSUTF8StringEncoding],
-                    documentAttributes: nil).string
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
-        
-        cell.descriptionLabel.text = text
-        
-        let dataClasses = breach.dataClasses ?? "N/A"
-        let dataClassesText = NSMutableAttributedString()
-        dataClassesText.appendAttributedString(NSAttributedString(string: "Compromised Data: ",
-            attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(12)]))
-        dataClassesText.appendAttributedString(NSAttributedString(string: "\(dataClasses)",
-            attributes:  [NSFontAttributeName: UIFont.systemFontOfSize(12)]))
-        cell.dataClassesLabel.attributedText = dataClassesText
-        if let domain = breach.domain {
-            cell.loadImage(domain)
-        }
-        
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-    }
-    
+   
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let sectionInfo = fetchedResultsController.sections![section]
         return sectionInfo.numberOfObjects
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        let CellIdentifier = "BreachCell"
         let breach = fetchedResultsController.objectAtIndexPath(indexPath) as! Breach
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)! as! BreachCell
-        configureCell(cell, withBreach: breach)
-        
-        cell.setNeedsUpdateConstraints()
-        cell.updateConstraintsIfNeeded()
-        
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier(BreachCell.cellIdentifier)! as! BreachCell
+        cell.configure(breach)
         return cell
     }
     
@@ -139,7 +99,7 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
         case .Update:
             let breach = controller.objectAtIndexPath(indexPath!) as! Breach
             let cell = tableView.cellForRowAtIndexPath(indexPath!)! as! BreachCell
-            configureCell(cell, withBreach: breach)
+            cell.configure(breach)
         case .Move:
             tableView.deleteRowsAtIndexPaths([indexPath!], withRowAnimation: .Fade)
             tableView.insertRowsAtIndexPaths([newIndexPath!], withRowAnimation: .Fade)

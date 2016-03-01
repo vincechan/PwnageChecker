@@ -56,11 +56,9 @@ class HaveIBeenPwnedClient : NSObject {
     }
     
     func getBreachesForAccount(emailOrUsername : String, completionHandler : (hasBreaches: Bool, result: AnyObject!, error: String?)->Void) {
-      
+        
         let escapedValue = emailOrUsername.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         let method = HttpClient.subtituteKeyInMethod(Methods.BreachAccount, key: UrlKeys.Account, value: escapedValue)!
-       
-        //let urlParams = [ "truncateResponse": "true"];
         
         HttpClient.sharedInstance().httpGet(BASE_URL, method: method, urlParams: nil, headerParams: nil) {
             (data, code, error) in
@@ -87,7 +85,7 @@ class HaveIBeenPwnedClient : NSObject {
             }
         }
     }
-        
+    
     // refresh breaches in local cache
     func refreshBreachesInBackground()->Void {
         getBreaches() {
@@ -101,7 +99,7 @@ class HaveIBeenPwnedClient : NSObject {
                 print("refreshBreaches: no breach result found in response")
                 return
             }
-
+            
             guard breachArray.count > 0 else {
                 print("refreshBreaches: no breach result found in response")
                 return

@@ -20,9 +20,7 @@ class ClearbitClient : NSObject {
         return Singleton.sharedInstance
     }
     
-    
     // get image given a domain
-
     func getImage(domain: String, completionHandler: (imageData: NSData?, error: String?)->Void) -> Void {
         let imageUrl = BASE_URL + domain
         let url = NSURL(string: imageUrl)!
@@ -37,5 +35,5 @@ class ClearbitClient : NSObject {
         }
         task.resume()
     }
-
+    
 }

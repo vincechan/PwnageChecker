@@ -40,6 +40,14 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
         }
     }
     
+    override func viewWillAppear(animated: Bool) {
+        ViewHelper.makeNavBarTransparent(navigationController)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        ViewHelper.undoMakeNavBarTransparent(navigationController)
+    }
+    
     func showBreach() {
         let breachArray = apiResult as! [[String:AnyObject]]
         for breachItem in breachArray {
@@ -48,9 +56,7 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
             print(breach.title)
         }
         print(breaches.count)
-        
-         UINavigationBar.appearance().barTintColor = UIColor(red: 229/255, green: 000/255, blue: 0/255, alpha: 1)
-        
+    
         view.backgroundColor = UIColor(red: 229/255, green: 000/255, blue: 0/255, alpha: 1)
         headerView.backgroundColor = UIColor(red: 229/255, green: 000/255, blue: 0/255, alpha: 1)
         iconLabel.text = "\u{e403}"
@@ -69,50 +75,14 @@ class SearchResultsViewController: UIViewController, UITableViewDataSource, UITa
         tableView.hidden = true
     }
     
-    
-    func configureCell(cell: BreachCell, withBreach breach: Breach) {
-        cell.titleLabel.text = breach.title
-        var text = ""
-        if let desc = breach.desc?.dataUsingEncoding(NSUTF8StringEncoding) {
-            do {
-                text = try NSAttributedString(data: desc,
-                    options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-                        NSCharacterEncodingDocumentAttribute:NSUTF8StringEncoding],
-                    documentAttributes: nil).string
-            } catch let error as NSError {
-                print(error.localizedDescription)
-            }
-        }
-        
-        cell.descriptionLabel.text = text
-        
-        let dataClasses = breach.dataClasses ?? "N/A"
-        let dataClassesText = NSMutableAttributedString()
-        dataClassesText.appendAttributedString(NSAttributedString(string: "Compromised Data: ",
-            attributes: [NSFontAttributeName: UIFont.boldSystemFontOfSize(12)]))
-        dataClassesText.appendAttributedString(NSAttributedString(string: "\(dataClasses)",
-            attributes:  [NSFontAttributeName: UIFont.systemFontOfSize(12)]))
-        cell.dataClassesLabel.attributedText = dataClassesText
-        if let domain = breach.domain {
-            cell.loadImage(domain)
-        }
-        
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-    }
-    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return breaches.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let CellIdentifier = "BreachCell"
         let breach = breaches[indexPath.row]
-        let cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)! as! BreachCell
-        configureCell(cell, withBreach: breach)
-        
-        cell.setNeedsUpdateConstraints()
-        cell.updateConstraintsIfNeeded()
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier(BreachCell.cellIdentifier)! as! BreachCell
+        cell.configure(breach)
         return cell
     }
     

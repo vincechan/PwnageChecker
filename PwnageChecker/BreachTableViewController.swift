@@ -27,7 +27,17 @@ class BreachTableViewController: UIViewController, UITableViewDataSource, UITabl
     
     override func viewWillAppear(animated: Bool) {
         if (fetchedResultsController.fetchedObjects?.count == 0) {
-            HaveIBeenPwnedClient.sharedInstance().refreshBreachesInBackground()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+            HaveIBeenPwnedClient.sharedInstance().refreshBreachesInBackground() {
+                (error) in
+                UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+                if (error != nil) {
+                    print(error)
+                    dispatch_async(dispatch_get_main_queue()) {
+                        ViewHelper.showError("Unable to retrieve data from network")
+                    }
+                }
+            }
         }
     }
     

@@ -87,21 +87,21 @@ class HaveIBeenPwnedClient : NSObject {
     }
     
     // refresh breaches in local cache
-    func refreshBreachesInBackground()->Void {
+    func refreshBreachesInBackground(completionHandler: (error: String?)->Void)->Void {
         getBreaches() {
             (result, error) in
             guard (error == nil) else {
-                print("refreshBreaches: error \(error)")
+                completionHandler(error: "refreshBreaches: error \(error)")
                 return
             }
             
             guard let breachArray = result as? [[String:AnyObject]] else {
-                print("refreshBreaches: no breach result found in response")
+                completionHandler(error: "refreshBreaches: no breach result found in response")
                 return
             }
             
             guard breachArray.count > 0 else {
-                print("refreshBreaches: no breach result found in response")
+                completionHandler(error: "refreshBreaches: no breach result found in response")
                 return
             }
             
@@ -112,6 +112,7 @@ class HaveIBeenPwnedClient : NSObject {
                 }
                 CoreDataStackManager.sharedInstance().saveContext()
             }
+            completionHandler(error: nil)
         }
     }
 }

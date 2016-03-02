@@ -86,9 +86,6 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.borderWidth">
-                                                <integer key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="checkButtonTouch:" destination="R7a-4N-cgi" eventType="touchUpInside" id="GTY-8A-ZYy"/>
@@ -669,6 +666,6 @@
     <resources>
         <image name="Info" width="40" height="40"/>
         <image name="Search" width="40" height="40"/>
-        <image name="noImage" width="256" height="256"/>
+        <image name="noImage" width="40" height="40"/>
     </resources>
 </document>

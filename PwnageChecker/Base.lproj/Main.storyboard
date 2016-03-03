@@ -60,7 +60,7 @@
                                     <constraint firstAttribute="height" id="JQe-4q-oGK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="JQe-4q-oGK"/>

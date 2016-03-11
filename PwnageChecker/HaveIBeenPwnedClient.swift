@@ -23,7 +23,7 @@ extension HaveIBeenPwnedClient {
 class HaveIBeenPwnedClient : NSObject {
     
     let BASE_URL = "https://haveibeenpwned.com/api/v2/"
-    
+    let USER_AGENT = "PwnageChecker"
     
     class func sharedInstance() -> HaveIBeenPwnedClient {
         struct Singleton {
@@ -34,7 +34,8 @@ class HaveIBeenPwnedClient : NSObject {
     }
     
     private func getBreaches(completionHandler: (result: AnyObject!, error: String?)->Void) {
-        HttpClient.sharedInstance().httpGet(BASE_URL, method: Methods.Breaches, urlParams: nil, headerParams: nil) {
+        let headerParams = ["User-Agent" : USER_AGENT]
+        HttpClient.sharedInstance().httpGet(BASE_URL, method: Methods.Breaches, urlParams: nil, headerParams: headerParams) {
             (data, code, error) in
             
             guard error == nil else {
@@ -59,8 +60,9 @@ class HaveIBeenPwnedClient : NSObject {
         
         let escapedValue = emailOrUsername.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())!
         let method = HttpClient.subtituteKeyInMethod(Methods.BreachAccount, key: UrlKeys.Account, value: escapedValue)!
+        let headerParams = ["User-Agent" : USER_AGENT]
         
-        HttpClient.sharedInstance().httpGet(BASE_URL, method: method, urlParams: nil, headerParams: nil) {
+        HttpClient.sharedInstance().httpGet(BASE_URL, method: method, urlParams: nil, headerParams: headerParams) {
             (data, code, error) in
             
             guard error == nil else {

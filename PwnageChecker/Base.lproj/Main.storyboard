@@ -17,12 +17,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="Q3t-IH-lUx" kind="relationship" relationship="viewControllers" id="DiB-jr-KnO"/>
+                        <segue destination="cP3-hj-ebD" kind="relationship" relationship="viewControllers" id="IYs-Wd-TUr"/>
                         <segue destination="GbU-lE-KhM" kind="relationship" relationship="viewControllers" id="D0c-ds-Vbi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBh-Z4-6VO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-583" y="-162"/>
+            <point key="canvasLocation" x="-577" y="138"/>
         </scene>
         <!--Search Account View Controller-->
         <scene sceneID="iRJ-ct-E2r">
@@ -36,7 +37,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-po-YIQ">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ziH-po-YIQ">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your account in known data breach to check if it has been compromised" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwA-qs-c8P">
@@ -54,7 +55,7 @@
                                     <constraint firstItem="hwA-qs-c8P" firstAttribute="top" secondItem="ziH-po-YIQ" secondAttribute="top" constant="40" id="io4-Cf-rTp"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Enter email address or username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBB-7X-f48">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Enter email address or username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vBB-7X-f48">
                                 <rect key="frame" x="20" y="120" width="560" height="386"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="JQe-4q-oGK"/>
@@ -118,20 +119,18 @@
                             <constraint firstItem="ziH-po-YIQ" firstAttribute="leading" secondItem="SY8-N5-XuN" secondAttribute="leading" id="GsV-sC-pQm"/>
                             <constraint firstItem="vBB-7X-f48" firstAttribute="top" secondItem="ziH-po-YIQ" secondAttribute="bottom" id="KkE-yH-DiE"/>
                             <constraint firstItem="vBB-7X-f48" firstAttribute="top" secondItem="ziH-po-YIQ" secondAttribute="bottom" id="L6C-mE-RV4"/>
+                            <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="ESu-gh-GzE" secondAttribute="bottom" id="LKZ-8M-g7b"/>
                             <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="SY8-N5-XuN" secondAttribute="top" id="OaN-V2-nFJ"/>
-                            <constraint firstItem="zP2-j5-WLc" firstAttribute="top" secondItem="XqW-bq-gfO" secondAttribute="bottom" id="QKq-PO-Iuu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vBB-7X-f48" secondAttribute="trailing" id="bfW-R6-I83"/>
-                            <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="ESu-gh-GzE" secondAttribute="bottom" id="oJc-5C-E7h"/>
+                            <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="ESu-gh-GzE" secondAttribute="bottom" id="brh-uH-XhU"/>
                             <constraint firstAttribute="trailing" secondItem="XqW-bq-gfO" secondAttribute="trailing" id="pGM-Rc-xMC"/>
-                            <constraint firstItem="ziH-po-YIQ" firstAttribute="top" secondItem="ESu-gh-GzE" secondAttribute="bottom" id="rFO-vr-zUj"/>
                             <constraint firstItem="Krs-IR-mKn" firstAttribute="top" secondItem="vBB-7X-f48" secondAttribute="bottom" id="sX0-dc-EGE"/>
+                            <constraint firstItem="zP2-j5-WLc" firstAttribute="top" secondItem="XqW-bq-gfO" secondAttribute="bottom" id="wN0-7Z-1rD"/>
                             <constraint firstItem="XqW-bq-gfO" firstAttribute="leading" secondItem="SY8-N5-XuN" secondAttribute="leading" id="z3V-S4-V7x"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="OaN-V2-nFJ"/>
-                                <exclude reference="oJc-5C-E7h"/>
-                                <exclude reference="rFO-vr-zUj"/>
                                 <exclude reference="L6C-mE-RV4"/>
                             </mask>
                         </variation>
@@ -145,6 +144,107 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZr-oF-0Uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="839" y="-525"/>
+        </scene>
+        <!--Search Contact View Controller-->
+        <scene sceneID="gH1-If-6wp">
+            <objects>
+                <viewController id="hcc-HD-oEy" customClass="SearchContactViewController" customModule="PwnageChecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DLK-fj-o3q"/>
+                        <viewControllerLayoutGuide type="bottom" id="stC-7L-2YD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="a38-YY-Zat">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8oz-0r-y2B">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Search your friend's email address in known data breach to check if it has been compromised" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fLt-2Y-w2c">
+                                        <rect key="frame" x="10" y="40" width="580" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.89547413789999997" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="2pl-SO-t4S"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="O1a-yh-th0"/>
+                                    <constraint firstItem="fLt-2Y-w2c" firstAttribute="top" secondItem="8oz-0r-y2B" secondAttribute="top" constant="40" id="QXW-Uz-6om"/>
+                                    <constraint firstAttribute="trailing" secondItem="fLt-2Y-w2c" secondAttribute="trailing" constant="10" id="R3R-fl-9r5"/>
+                                    <constraint firstItem="fLt-2Y-w2c" firstAttribute="leading" secondItem="8oz-0r-y2B" secondAttribute="leading" constant="10" id="rKc-H9-ams"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="O1a-yh-th0"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cky-54-78g">
+                                <rect key="frame" x="0.0" y="501" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bf-iy-zBi">
+                                        <rect key="frame" x="5" y="5" width="590" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <inset key="contentEdgeInsets" minX="40" minY="5" maxX="40" maxY="5"/>
+                                        <state key="normal" title="Select Contact">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="checkButtonTouch:" destination="R7a-4N-cgi" eventType="touchUpInside" id="por-Nu-G85"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.80000000000000004" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4bf-iy-zBi" firstAttribute="leading" secondItem="cky-54-78g" secondAttribute="leading" constant="5" id="3sF-vt-fea"/>
+                                    <constraint firstItem="4bf-iy-zBi" firstAttribute="centerX" secondItem="cky-54-78g" secondAttribute="centerX" id="642-px-lcO"/>
+                                    <constraint firstItem="4bf-iy-zBi" firstAttribute="centerY" secondItem="cky-54-78g" secondAttribute="centerY" id="8Td-8g-YQA"/>
+                                    <constraint firstAttribute="bottom" secondItem="4bf-iy-zBi" secondAttribute="bottom" constant="5" id="c6F-Qf-aFI"/>
+                                    <constraint firstAttribute="trailing" secondItem="4bf-iy-zBi" secondAttribute="trailing" constant="5" id="gp8-LL-2j9"/>
+                                    <constraint firstAttribute="height" constant="50" id="lx2-wa-02X"/>
+                                    <constraint firstItem="4bf-iy-zBi" firstAttribute="top" secondItem="cky-54-78g" secondAttribute="top" constant="5" id="mUN-q0-Tng"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="642-px-lcO"/>
+                                        <exclude reference="8Td-8g-YQA"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8oz-0r-y2B" firstAttribute="top" secondItem="DLK-fj-o3q" secondAttribute="bottom" id="3NA-AV-Caf"/>
+                            <constraint firstItem="cky-54-78g" firstAttribute="leading" secondItem="a38-YY-Zat" secondAttribute="leading" id="62U-Px-4c9"/>
+                            <constraint firstItem="stC-7L-2YD" firstAttribute="top" secondItem="cky-54-78g" secondAttribute="bottom" id="Kca-uz-4Kl"/>
+                            <constraint firstItem="8oz-0r-y2B" firstAttribute="leading" secondItem="a38-YY-Zat" secondAttribute="leading" id="RlK-oB-RsZ"/>
+                            <constraint firstAttribute="trailing" secondItem="cky-54-78g" secondAttribute="trailing" id="VHx-ws-VK0"/>
+                            <constraint firstAttribute="trailing" secondItem="8oz-0r-y2B" secondAttribute="trailing" id="qyk-2j-1Fd"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="3NA-AV-Caf"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="ehR-xb-WRY"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zfy-WO-GXZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="142"/>
         </scene>
         <!--All Breached Sites-->
         <scene sceneID="tne-QT-ifu">
@@ -169,7 +269,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="156"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-tV-DqI">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="broken_image" translatesAutoresizingMaskIntoConstraints="NO" id="Yhf-tV-DqI">
                                                     <rect key="frame" x="10" y="10" width="80" height="80"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="51L-w6-CwH"/>
@@ -265,7 +365,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="839" y="148"/>
+            <point key="canvasLocation" x="836" y="914"/>
+        </scene>
+        <!--Search Contact-->
+        <scene sceneID="bAk-nd-fs4">
+            <objects>
+                <navigationController id="cP3-hj-ebD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search Contact" image="user" id="r6E-9H-Pev"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EiY-aB-HLH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="hcc-HD-oEy" kind="relationship" relationship="rootViewController" id="hwk-R6-RM2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gDs-Hi-1XC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129" y="138"/>
         </scene>
         <!--Result-->
         <scene sceneID="2Ba-BN-2Is">
@@ -349,7 +466,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="159"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="j14-Ys-Wk2">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="broken_image" translatesAutoresizingMaskIntoConstraints="NO" id="j14-Ys-Wk2">
                                                     <rect key="frame" x="10" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="Gx0-fn-jf0"/>
@@ -632,7 +749,7 @@
         <scene sceneID="EIL-7d-Hbd">
             <objects>
                 <navigationController id="GbU-lE-KhM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="All Breached Sites" image="Info" selectedImage="Info" id="Rtv-sb-v2q"/>
+                    <tabBarItem key="tabBarItem" title="All Breached Sites" image="info" id="Rtv-sb-v2q"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3dL-VQ-bdA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -643,13 +760,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rg3-yy-nIW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="148"/>
+            <point key="canvasLocation" x="129" y="914"/>
         </scene>
         <!--Search-->
         <scene sceneID="5ib-9V-V3o">
             <objects>
                 <navigationController id="Q3t-IH-lUx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="Search" id="ip7-0F-xLl"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" id="ip7-0F-xLl"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mgf-p3-Z9v">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -664,8 +781,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Info" width="40" height="40"/>
-        <image name="Search" width="40" height="40"/>
-        <image name="noImage" width="40" height="40"/>
+        <image name="broken_image" width="24" height="24"/>
+        <image name="info" width="24" height="24"/>
+        <image name="search" width="24" height="24"/>
+        <image name="user" width="24" height="24"/>
     </resources>
 </document>

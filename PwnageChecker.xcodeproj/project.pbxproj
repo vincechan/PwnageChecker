@@ -16,6 +16,7 @@
 		A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */; };
 		A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1ED1C4B0DB400738ACA /* Breach.swift */; };
 		A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1F01C4DB2BC00738ACA /* HttpClient.swift */; };
+		A93C7D281C9AB09700EDA9A8 /* SearchContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C7D271C9AB09700EDA9A8 /* SearchContactViewController.swift */; };
 		A94DEEDE1C68C3C000DBDE87 /* BreachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */; };
 		A94DEEE01C78FC8600DBDE87 /* SearchAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */; };
 		A94DEEE21C7B929700DBDE87 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEE11C7B929700DBDE87 /* LoadingIndicatorView.swift */; };
@@ -40,6 +41,7 @@
 		A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breach+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A914C1ED1C4B0DB400738ACA /* Breach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
 		A914C1F01C4DB2BC00738ACA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		A93C7D271C9AB09700EDA9A8 /* SearchContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchContactViewController.swift; sourceTree = "<group>"; };
 		A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachViewController.swift; sourceTree = "<group>"; };
 		A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAccountViewController.swift; sourceTree = "<group>"; };
 		A94DEEE11C7B929700DBDE87 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */,
 				A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */,
 				A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */,
+				A93C7D271C9AB09700EDA9A8 /* SearchContactViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				A94DEEE61C839B3E00DBDE87 /* SearchResultsViewController.swift in Sources */,
 				A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */,
 				A96EF00B1C85830700D4BA57 /* ViewHelper.swift in Sources */,
+				A93C7D281C9AB09700EDA9A8 /* SearchContactViewController.swift in Sources */,
 				A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */,
 				A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */,
 				A914C1E41C4AF9A200738ACA /* CoreDataStackManager.swift in Sources */,

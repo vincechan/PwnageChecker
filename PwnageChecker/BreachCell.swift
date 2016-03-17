@@ -61,7 +61,7 @@ class BreachCell: UITableViewCell {
             
             ClearbitClient.sharedInstance().getImage(companyDomain) {
                 (imageData, error) in
-                var downloadImage = UIImage(named: "noImage")
+                var downloadImage = UIImage(named: "broken_image")
                 if (error != nil) {
                     print("download image error domain: \(companyDomain) error \(error)")
                 }

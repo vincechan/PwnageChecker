@@ -203,6 +203,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="checkButtonTouch:" destination="R7a-4N-cgi" eventType="touchUpInside" id="por-Nu-G85"/>
+                                            <action selector="selectContactButtonTouch:" destination="hcc-HD-oEy" eventType="touchUpInside" id="uRW-pt-onu"/>
                                         </connections>
                                     </button>
                                 </subviews>

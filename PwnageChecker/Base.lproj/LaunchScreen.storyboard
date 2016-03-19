@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pwnage Checker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egE-Bi-Kx0">
-                                <rect key="frame" x="20" y="50" width="560" height="39"/>
+                                <rect key="frame" x="20" y="50" width="560" height="180"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -29,8 +29,8 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Check if you have an account that has been compromised in a data breach" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1V-ze-rCb">
-                                <rect key="frame" x="30" y="139" width="540" height="100"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check if an account that has been compromised in any known data breach" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1V-ze-rCb">
+                                <rect key="frame" x="30" y="280" width="540" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -44,6 +44,7 @@
                             <constraint firstAttribute="trailing" secondItem="G5B-73-zAS" secondAttribute="trailing" constant="20" id="VX3-iP-mdL"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="G5B-73-zAS" secondAttribute="bottom" constant="30" id="bzp-mY-HD8"/>
                             <constraint firstItem="egE-Bi-Kx0" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="30" id="lUI-Iz-aM6"/>
+                            <constraint firstItem="u1V-ze-rCb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qOs-nb-fYs"/>
                             <constraint firstItem="G5B-73-zAS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="sAk-Q3-VHB"/>
                             <constraint firstItem="u1V-ze-rCb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="30" id="swV-qy-eQR"/>
                             <constraint firstItem="u1V-ze-rCb" firstAttribute="top" secondItem="egE-Bi-Kx0" secondAttribute="bottom" constant="50" id="uTk-30-R0h"/>

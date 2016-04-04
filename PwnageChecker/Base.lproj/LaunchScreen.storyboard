@@ -17,38 +17,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pwnage Checker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egE-Bi-Kx0">
-                                <rect key="frame" x="20" y="50" width="560" height="180"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by HaveIBeenPwned.com api" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5B-73-zAS">
                                 <rect key="frame" x="20" y="555" width="560" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check if an account that has been compromised in any known data breach" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1V-ze-rCb">
-                                <rect key="frame" x="30" y="280" width="540" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check if an account has been compromised in a data breach" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u1V-ze-rCb">
+                                <rect key="frame" x="40" y="290" width="520" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="qcJ-Ou-CkQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qcJ-Ou-CkQ"/>
+                                    </mask>
+                                </variation>
                             </label>
+                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Breach Checker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdm-Gy-Iiy">
+                                <rect key="frame" x="20" y="254" width="560" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2gr-SM-MIy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Farah" family="Farah" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2gr-SM-MIy"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="security_48" translatesAutoresizingMaskIntoConstraints="NO" id="p7Q-DR-q7T">
+                                <rect key="frame" x="250" y="330" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="BrC-HH-T4f"/>
+                                    <constraint firstAttribute="height" constant="100" id="Uqf-Tc-Q2N"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="u1V-ze-rCb" secondAttribute="trailing" constant="30" id="8Gt-Hv-Fnp"/>
-                            <constraint firstAttribute="trailing" secondItem="egE-Bi-Kx0" secondAttribute="trailing" constant="20" id="CTU-9g-3Ec"/>
-                            <constraint firstItem="egE-Bi-Kx0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="O3a-ry-J9c"/>
+                            <constraint firstItem="u1V-ze-rCb" firstAttribute="top" secondItem="Hdm-Gy-Iiy" secondAttribute="bottom" constant="8" id="5LM-9r-qW0"/>
+                            <constraint firstAttribute="trailing" secondItem="u1V-ze-rCb" secondAttribute="trailing" constant="40" id="8Gt-Hv-Fnp"/>
+                            <constraint firstItem="p7Q-DR-q7T" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Pd9-cG-9H2"/>
                             <constraint firstAttribute="trailing" secondItem="G5B-73-zAS" secondAttribute="trailing" constant="20" id="VX3-iP-mdL"/>
+                            <constraint firstItem="p7Q-DR-q7T" firstAttribute="top" secondItem="u1V-ze-rCb" secondAttribute="bottom" constant="20" id="XGp-WK-GER"/>
+                            <constraint firstItem="Hdm-Gy-Iiy" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="30" id="Yn2-5O-hYg"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="G5B-73-zAS" secondAttribute="bottom" constant="30" id="bzp-mY-HD8"/>
-                            <constraint firstItem="egE-Bi-Kx0" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="30" id="lUI-Iz-aM6"/>
+                            <constraint firstItem="Hdm-Gy-Iiy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="jc1-rF-Ne6"/>
                             <constraint firstItem="u1V-ze-rCb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="qOs-nb-fYs"/>
                             <constraint firstItem="G5B-73-zAS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="sAk-Q3-VHB"/>
-                            <constraint firstItem="u1V-ze-rCb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="30" id="swV-qy-eQR"/>
-                            <constraint firstItem="u1V-ze-rCb" firstAttribute="top" secondItem="egE-Bi-Kx0" secondAttribute="bottom" constant="50" id="uTk-30-R0h"/>
+                            <constraint firstItem="u1V-ze-rCb" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="40" id="swV-qy-eQR"/>
+                            <constraint firstAttribute="trailing" secondItem="Hdm-Gy-Iiy" secondAttribute="trailing" constant="20" id="uaG-yB-xhn"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Yn2-5O-hYg"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -56,4 +86,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="security_48" width="48" height="48"/>
+    </resources>
 </document>

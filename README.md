@@ -26,3 +26,4 @@ Clone the project. Open the .xcodeproject file and compile
 ## Credits
 * This app uses the [HaveIBeenPwned API](https://haveibeenpwned.com/API/v2) for breach data
 * This app uses the [ClearBit Logo API](https://clearbit.com/docs#logo-api) for company logo images
+* This app uses the [Google Material Icons](https://design.google.com/icons)

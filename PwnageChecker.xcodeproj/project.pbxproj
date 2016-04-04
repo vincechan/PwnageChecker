@@ -16,14 +16,13 @@
 		A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */; };
 		A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1ED1C4B0DB400738ACA /* Breach.swift */; };
 		A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1F01C4DB2BC00738ACA /* HttpClient.swift */; };
-		A93C7D281C9AB09700EDA9A8 /* SearchContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93C7D271C9AB09700EDA9A8 /* SearchContactViewController.swift */; };
 		A94DEEDE1C68C3C000DBDE87 /* BreachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */; };
-		A94DEEE01C78FC8600DBDE87 /* SearchAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */; };
 		A94DEEE21C7B929700DBDE87 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEE11C7B929700DBDE87 /* LoadingIndicatorView.swift */; };
 		A94DEEE61C839B3E00DBDE87 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */; };
 		A96EF00B1C85830700D4BA57 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A96EF00A1C85830700D4BA57 /* ViewHelper.swift */; };
 		A9C3A94F1C6437A800C85570 /* ClearbitClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3A94E1C6437A800C85570 /* ClearbitClient.swift */; };
 		A9C3A9511C64502200C85570 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C3A9501C64502200C85570 /* ImageCache.swift */; };
+		A9CE930B1CB040FD0044D5F6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9CE930A1CB040FD0044D5F6 /* SearchViewController.swift */; };
 		A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EA73871C5EFFF50011F244 /* BreachCell.swift */; };
 		A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9EF6D971C521F89002417F7 /* Model.xcdatamodeld */; };
 		A9F327F81C5B3D4900BAB1AB /* BreachTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */; };
@@ -41,14 +40,13 @@
 		A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breach+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A914C1ED1C4B0DB400738ACA /* Breach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
 		A914C1F01C4DB2BC00738ACA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
-		A93C7D271C9AB09700EDA9A8 /* SearchContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchContactViewController.swift; sourceTree = "<group>"; };
 		A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachViewController.swift; sourceTree = "<group>"; };
-		A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchAccountViewController.swift; sourceTree = "<group>"; };
 		A94DEEE11C7B929700DBDE87 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		A96EF00A1C85830700D4BA57 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewHelper.swift; sourceTree = "<group>"; };
 		A9C3A94E1C6437A800C85570 /* ClearbitClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClearbitClient.swift; sourceTree = "<group>"; };
 		A9C3A9501C64502200C85570 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		A9CE930A1CB040FD0044D5F6 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		A9EA73871C5EFFF50011F244 /* BreachCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachCell.swift; sourceTree = "<group>"; };
 		A9EF6D981C521F89002417F7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachTableViewController.swift; sourceTree = "<group>"; };
@@ -114,9 +112,8 @@
 			children = (
 				A9F327F71C5B3D4900BAB1AB /* BreachTableViewController.swift */,
 				A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */,
-				A94DEEDF1C78FC8600DBDE87 /* SearchAccountViewController.swift */,
 				A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */,
-				A93C7D271C9AB09700EDA9A8 /* SearchContactViewController.swift */,
+				A9CE930A1CB040FD0044D5F6 /* SearchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -228,13 +225,12 @@
 				A94DEEE61C839B3E00DBDE87 /* SearchResultsViewController.swift in Sources */,
 				A9EA73881C5EFFF50011F244 /* BreachCell.swift in Sources */,
 				A96EF00B1C85830700D4BA57 /* ViewHelper.swift in Sources */,
-				A93C7D281C9AB09700EDA9A8 /* SearchContactViewController.swift in Sources */,
 				A9EF6D991C521F89002417F7 /* Model.xcdatamodeld in Sources */,
 				A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */,
 				A914C1E41C4AF9A200738ACA /* CoreDataStackManager.swift in Sources */,
 				A94DEEE21C7B929700DBDE87 /* LoadingIndicatorView.swift in Sources */,
+				A9CE930B1CB040FD0044D5F6 /* SearchViewController.swift in Sources */,
 				A914C1E21C4AF78600738ACA /* HaveIBeenPwnedClient.swift in Sources */,
-				A94DEEE01C78FC8600DBDE87 /* SearchAccountViewController.swift in Sources */,
 				A94DEEDE1C68C3C000DBDE87 /* BreachViewController.swift in Sources */,
 				A9F327F81C5B3D4900BAB1AB /* BreachTableViewController.swift in Sources */,
 				A914C1CC1C4AF50300738ACA /* AppDelegate.swift in Sources */,

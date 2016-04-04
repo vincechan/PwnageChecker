@@ -2,13 +2,15 @@
 PwnageChecker is an iOS app that allows users to quickly check whether an account has been compromised in one of the known data breaches.
 
 ## To Use
-Enter the email address or username of the account to check and press "Search" Button
-View the results
+Enter the email address or username of the account. Or select the email address from a contact (to check account for a less technical savvy friend).
 
 ## Screen Shots
-####Search by email address or username
-<img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/search1.png" alt="Login View" width="250" height="450">
-<img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/search2.png" alt="Login View" width="250" height="450">
+####Check account screen
+<img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/check-screen.png" alt="Check Account Screen" width="250" height="450">
+####Enter an account
+<img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/enter-account-screen.png" alt="Enter an account" width="250" height="450">
+####Select email address from a contact
+<img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/select-contact-screen.png" alt="Select contact View" width="250" height="450">
 
 ####View Search Results
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/search-result-no-breach.png" alt="Login View" width="250" height="450">

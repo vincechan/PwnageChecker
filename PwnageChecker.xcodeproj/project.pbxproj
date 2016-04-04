@@ -16,6 +16,7 @@
 		A914C1EE1C4B0DB400738ACA /* Breach+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */; };
 		A914C1EF1C4B0DB400738ACA /* Breach.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1ED1C4B0DB400738ACA /* Breach.swift */; };
 		A914C1F11C4DB2BC00738ACA /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A914C1F01C4DB2BC00738ACA /* HttpClient.swift */; };
+		A93624C71CB26414007E3FC4 /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93624C61CB26414007E3FC4 /* NotifyViewController.swift */; };
 		A94DEEDE1C68C3C000DBDE87 /* BreachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */; };
 		A94DEEE21C7B929700DBDE87 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEE11C7B929700DBDE87 /* LoadingIndicatorView.swift */; };
 		A94DEEE61C839B3E00DBDE87 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */; };
@@ -40,6 +41,7 @@
 		A914C1EC1C4B0DB400738ACA /* Breach+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Breach+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A914C1ED1C4B0DB400738ACA /* Breach.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breach.swift; sourceTree = "<group>"; };
 		A914C1F01C4DB2BC00738ACA /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		A93624C61CB26414007E3FC4 /* NotifyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
 		A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreachViewController.swift; sourceTree = "<group>"; };
 		A94DEEE11C7B929700DBDE87 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
 		A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				A94DEEDD1C68C3C000DBDE87 /* BreachViewController.swift */,
 				A94DEEE51C839B3E00DBDE87 /* SearchResultsViewController.swift */,
 				A9CE930A1CB040FD0044D5F6 /* SearchViewController.swift */,
+				A93624C61CB26414007E3FC4 /* NotifyViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				A914C1E21C4AF78600738ACA /* HaveIBeenPwnedClient.swift in Sources */,
 				A94DEEDE1C68C3C000DBDE87 /* BreachViewController.swift in Sources */,
 				A9F327F81C5B3D4900BAB1AB /* BreachTableViewController.swift in Sources */,
+				A93624C71CB26414007E3FC4 /* NotifyViewController.swift in Sources */,
 				A914C1CC1C4AF50300738ACA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,7 @@
                     <connections>
                         <segue destination="lLE-rY-lSj" kind="relationship" relationship="viewControllers" id="e3B-Z5-sRh"/>
                         <segue destination="GbU-lE-KhM" kind="relationship" relationship="viewControllers" id="D0c-ds-Vbi"/>
+                        <segue destination="Xu0-bV-kfk" kind="relationship" relationship="viewControllers" id="LV7-Il-n8v"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBh-Z4-6VO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -144,6 +145,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="769" y="905"/>
+        </scene>
+        <!--Notify-->
+        <scene sceneID="7Ff-Vn-JkG">
+            <objects>
+                <navigationController id="Xu0-bV-kfk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notify" image="notifications_24_white" id="Pbp-no-Wka"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WLl-W1-MQD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Amg-mi-btg" kind="relationship" relationship="rootViewController" id="TTM-JE-eaY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V9w-58-H9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="87" y="1588"/>
+        </scene>
+        <!--Notify View Controller-->
+        <scene sceneID="IHX-oc-Yxv">
+            <objects>
+                <viewController id="Amg-mi-btg" customClass="NotifyViewController" customModule="PwnageChecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1PU-yd-hBu"/>
+                        <viewControllerLayoutGuide type="bottom" id="umr-te-9TR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ftz-nA-fVz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RoU-gE-qkX">
+                                <rect key="frame" x="0.0" y="20" width="600" height="531"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RoU-gE-qkX" secondAttribute="trailing" id="2CB-0g-K4C"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RoU-gE-qkX" secondAttribute="bottom" id="4Hw-du-KkJ"/>
+                            <constraint firstItem="RoU-gE-qkX" firstAttribute="top" secondItem="ftz-nA-fVz" secondAttribute="topMargin" id="OV3-r5-Gzd"/>
+                            <constraint firstItem="RoU-gE-qkX" firstAttribute="bottom" secondItem="umr-te-9TR" secondAttribute="top" id="T5D-qL-WHa"/>
+                            <constraint firstItem="RoU-gE-qkX" firstAttribute="leading" secondItem="ftz-nA-fVz" secondAttribute="leading" id="a8n-6d-4fI"/>
+                            <constraint firstItem="RoU-gE-qkX" firstAttribute="top" secondItem="1PU-yd-hBu" secondAttribute="bottom" id="hmg-IJ-gOv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T5D-qL-WHa"/>
+                                <exclude reference="hmg-IJ-gOv"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="J7Y-GI-ayh"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="RoU-gE-qkX" id="XEd-Ky-Gvl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iFa-0D-YI0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="1588"/>
         </scene>
         <!--Result-->
         <scene sceneID="2Ba-BN-2Is">
@@ -686,6 +747,7 @@
     <resources>
         <image name="broken_image" width="24" height="24"/>
         <image name="info" width="24" height="24"/>
+        <image name="notifications_24_white" width="24" height="24"/>
         <image name="security_24_white" width="24" height="24"/>
         <image name="security_48" width="48" height="48"/>
     </resources>

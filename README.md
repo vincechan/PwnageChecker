@@ -7,14 +7,17 @@ Enter the email address or username of the account. Or select the email address 
 ## Screen Shots
 ####Check account screen
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/check-screen.png" alt="Check Account Screen" width="250" height="450">
-####Enter an account
+####Search by entering an account
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/enter-account-screen.png" alt="Enter an account" width="250" height="450">
-####Select email address from a contact
+####Search by selecting an email address from a contact
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/select-contact-screen.png" alt="Select contact View" width="250" height="450">
 
 ####View Search Results
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/search-result-no-breach.png" alt="Login View" width="250" height="450">
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/search-result-pwned.png" alt="Login View" width="250" height="450">
+
+####Subscribe to get notified when an account is compromised in a future data breach
+<img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/notify-screen.png" alt="Login View" width="250" height="450">
 
 ####View all breaches that has been loaded into the system
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/breach-list.png" alt="Login View" width="250" height="450">

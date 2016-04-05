@@ -69,6 +69,7 @@ class SearchViewController: UIViewController, CNContactPickerDelegate {
     }
     
     func checkAccount(account: String) {
+        LoadingIndicatorView.show("checking")
         HaveIBeenPwnedClient.sharedInstance().getBreachesForAccount(account) {
             (hasBreaches, result, error) in
             dispatch_async(dispatch_get_main_queue()) {

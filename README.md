@@ -7,8 +7,10 @@ Enter the email address or username of the account. Or select the email address 
 ## Screen Shots
 #### Check account screen
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/check-screen.png" alt="Check Account Screen" width="250" height="450">
+
 #### Search by entering an account
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/enter-account-screen.png" alt="Enter an account" width="250" height="450">
+
 #### Search by selecting an email address from a contact
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/select-contact-screen.png" alt="Select contact View" width="250" height="450">
 <img src="https://raw.github.com/vincechan/PwnageChecker/master/ScreenShots/select-contact-multiple-emails.png" alt="Select contact with multiple emails view" width="250" height="450">

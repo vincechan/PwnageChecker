@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vincechan/PwnageChecker.svg?branch=master)](https://travis-ci.org/vincechan/PwnageChecker)
+
 # PwnageChecker
 PwnageChecker is an iOS app that allows users to quickly check whether an account has been compromised in one of the known data breaches.
 

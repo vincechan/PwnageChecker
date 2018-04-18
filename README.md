@@ -3,6 +3,12 @@
 # PwnageChecker
 PwnageChecker is an iOS app that allows users to quickly check whether an account has been compromised in one of the known data breaches.
 
+## Installation
+You can install the app from [AppStore](https://itunes.apple.com/us/app/pwnagechecker/id1123923615?mt=8)
+
+## Building the App
+Information on how the app was built can be found [here](https://www.codeproject.com/Articles/1090305/Pwnage-Checker-An-iOS-App-Built-Using-Swift)
+
 ## To Use
 Enter the email address or username of the account. Or select the email address from a contact (to check account for a less technical savvy friend).
 
